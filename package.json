@@ -22,7 +22,6 @@
     "deploy": "gh-pages -d build "
 
   },
-  "homepage": "https://orchardtek.github.io/ai-workforce-dashboard-prototype/",
   "eslintConfig": {
     "extends": [
       "react-app",
