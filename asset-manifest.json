@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ai-workforce-dashboard-prototype/static/css/main.dc2b0577.css",
+    "main.js": "/ai-workforce-dashboard-prototype/static/js/main.f5d26a5a.js",
+    "static/js/453.f32bc328.chunk.js": "/ai-workforce-dashboard-prototype/static/js/453.f32bc328.chunk.js",
+    "index.html": "/ai-workforce-dashboard-prototype/index.html",
+    "main.dc2b0577.css.map": "/ai-workforce-dashboard-prototype/static/css/main.dc2b0577.css.map",
+    "main.f5d26a5a.js.map": "/ai-workforce-dashboard-prototype/static/js/main.f5d26a5a.js.map",
+    "453.f32bc328.chunk.js.map": "/ai-workforce-dashboard-prototype/static/js/453.f32bc328.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dc2b0577.css",
+    "static/js/main.f5d26a5a.js"
+  ]
+}
