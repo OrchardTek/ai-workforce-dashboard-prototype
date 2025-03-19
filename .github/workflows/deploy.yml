@@ -1,0 +1,43 @@
+name: AI WORKFORCE DASHBOARD PROTOTYPE
+
+on:
+  push:
+    branches:
+      - main  # Cambia a la rama que desees usar
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v3
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18  # Usa la versión que prefieras
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Setup environment variables
+        run: |
+          echo "REACT_APP_BASE_PATH=/ai-workforce-dashboard-prototype" >> .env
+          echo "PUBLIC_URL=/ai-workforce-dashboard-prototype" >> .env
+
+      - name: Construir la aplicación
+        run: npm run build
+
+      - name: Debug build output
+        run: ls -la build
+        
+      - name: Check for index.html
+        run: cat build/index.html || echo "index.html not found!"
+
+      - name: Deploy a GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: build
+          token: ${{ secrets.GH_SECRET }}
